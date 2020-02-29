@@ -12,7 +12,7 @@
   
 <html>
    <head>
-    <title>LIFESTYLE STORE | WELCOME E-COMMERCE WITH STYLE</title>
+    <title>LIFESTYLE STORE | WELCOME E-COMMERCE WITH SCALE&STYLE</title>
     <link rel="stylesheet" href="webframeworks\bootstrap\css\bootstrap.css" type="text/css" />
 
     <script src="webframeworks\bootstrap\js\jquery-3.3.1.min.js" type="text/javascript"/>
@@ -31,8 +31,8 @@
 		<div class="container">
 			<div id="banner_content">
 				<div class="text-center" style="background-color: transparent;">
-					<h1>We Sell Products.</h1>
-					<p style="word-spacing: 0.3em;letter-spacing:1.5px;">Flat 40% OFF On Premium Brands</p>
+					<h1>We let Sell Products and Buy products together</h1>
+					<p style="word-spacing: 0.3em;letter-spacing:1.5px;">Portal to Business and Sale</p>
 				</div>
                             <a class="btn btn-danger btn-lg active" href="products.php">Shop Now</a>
 			</div>
