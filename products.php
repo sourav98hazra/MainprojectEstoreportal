@@ -11,6 +11,7 @@
 
     <script src="webframeworks\bootstrap\js\bootstrap.js" type="text/javascript"/>
    </script>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
    <style>
        img {
     max-width: 600px;
@@ -72,6 +73,16 @@ function myFunction() {
   }
 }
 
+function sendquant(t){
+    $.ajax({
+        url:"http://localhost/internshalaphp/setquantity.php",
+        method:"POST",
+        data:$(t).serialize(),
+        success:function(data){
+            alert(data);
+        }
+    });
+}
 
 </script>
    <link rel="stylesheet" type="text/css" href="index.css">
@@ -155,6 +166,7 @@ if (mysqli_num_rows($result) > 0) {
                         <img src="<?php echo $row['images']?>" alt="" >
                         <div class="caption">
                             <h2><?php echo $row['product_name'] ?></h2>(<?php echo $row['product_brand'] ?>)
+                            <p style="text-align: center;"><b>Quantity:</b><br><center><input type="number" value="1" min="1" name="quant" class="quant" onchange="sendquant(this)" max="<?php echo $row['quantity']?>"></center></p>
                             <p>Rs. <?php echo '<del>'.$row['retail_price'].'</del>' ?> <?php echo $row['discounted_price'] ?> </p>
                             <p style="text-align: center;"><b>Description:</b><br><center><?php echo $row['description'] ?></center></p>
                             <?php setbtn($row['pid']); //takes care of the button acoording to status and login ?>
